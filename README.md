@@ -1,5 +1,5 @@
 # Google Tag Manager Detection
-Detect whether a host is running 
+Detect whether a host is tracking you through Google Analytics. 
 
  ## How does this detection method work?
 
