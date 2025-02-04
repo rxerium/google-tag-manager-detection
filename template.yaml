@@ -1,0 +1,28 @@
+id: google-tag-manager-detect
+info:
+  name: Google Tag Manager Detection
+  author: rxerium
+  severity: info
+  description: Detects the presence of Google Tag Manager (GTM)
+  reference:
+    - https://developers.google.com/tag-platform/tag-manager
+  classification:
+    cwe-id: CWE-200
+  tags: tech,google,tag-manager,tracking,fingerprinting
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "<!-- Google Tag Manager -->"
+          - "www.googletagmanager.com"
+        condition: and
+
+      - type: status
+        status:
+          - 200
