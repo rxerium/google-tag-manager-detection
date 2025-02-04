@@ -3,7 +3,7 @@ Detect whether a host is tracking you through Google Analytics.
 
  ## How does this detection method work?
 
-This detection template sends a GET request to the target URL and checks for Google Tag Manager (indicators in the HTML source, specifically the GTM comment (<!-- Google Tag Manager -->) and requests to www.googletagmanager.com. If both conditions match and the response status is 200, it confirms the presence of GTM.
+This detection template sends a GET request to the target URL and checks for Google Tag Manager (indicators in the HTML source, specifically the GTM comment (`<!-- Google Tag Manager -->`) and requests to www.googletagmanager.com. If both conditions match and the response status is 200, it confirms the presence of GTM.
 
 As of 04/01/25 there are ~360k instances running Google Tag Manager via Shodan (`http.html:"Google Tag Manager"`)
 ![image](https://github.com/user-attachments/assets/a6429f8f-f45f-40cc-8dff-7b7b2e35388d)
